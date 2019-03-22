@@ -76,7 +76,7 @@ pipeline {
 
 
         // building docker image for backend
-        stage('Build Docker Image for Frontend') {
+        stage('Build Docker Image for backend') {
             when {
                 branch 'master'
             }
