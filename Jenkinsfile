@@ -41,8 +41,8 @@ pipeline {
         stage('Building Front end application') {
             steps {
                 echo 'Running build automation'
-                sh 'npm install app/react-app'
-                sh 'npm run build app/react-app'
+                sh 'npm install'
+                sh 'npm run build'
                 archiveArtifacts artifacts: 'dist/**' //onlyIfSuccessful: true
             }
         }
