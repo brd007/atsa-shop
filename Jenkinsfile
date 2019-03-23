@@ -41,8 +41,8 @@ pipeline {
         stage('Building Front end application') {
             steps {
                 echo 'Running build automation'
-                sh 'npm install'
-                sh 'npm run ng build --prod'
+                sh 'npm install /app/react-app'
+                sh 'npm run build /app/react-app'
                 archiveArtifacts artifacts: 'dist/**' //onlyIfSuccessful: true
             }
         }
@@ -51,7 +51,7 @@ pipeline {
         stage('Building Backend Application') {
             steps {
                 echo 'Running Build for Backend'
-                sh 'maven -B'
+                sh 'mvn -B -f /app/pom.xml'
             }
         }
 
