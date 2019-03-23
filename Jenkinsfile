@@ -73,7 +73,7 @@ pipeline {
         }
 
 
-
+//trigger
 
         // building docker image for backend
         stage('Build Docker Image for backend') {
